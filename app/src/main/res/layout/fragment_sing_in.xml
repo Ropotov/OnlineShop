@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SingInFragment">
+
+    <TextView
+        android:id="@+id/tvSingInTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="123dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/sing_in"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="43dp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:hint="@string/first_name"
+        android:inputType="text"
+        android:textColorHint="@color/gray"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSingInTitle" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="43dp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:hint="@string/last_name"
+        android:inputType="text"
+        android:textColorHint="@color/gray"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+
+    <EditText
+        android:id="@+id/etSingInEmail"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="43dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/gray"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSingIn"
+        style="@style/BlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="43dp"
+        android:text="@string/sing_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSingInEmail" />
+
+    <TextView
+        android:id="@+id/tvAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/already_have_an_account"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSingIn"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/log_in"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnSingIn"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/btnLoginGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_white"
+        android:drawablePadding="7dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="@string/sing_in_with_google"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginApple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/btnLoginApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="@string/sing_in_with_apple"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginGoogle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

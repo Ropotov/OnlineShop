@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">OnlineShop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sing_in">Sing in</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First name</string>
+    <string name="email">Email</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
+    <string name="sing_in_with_google">Sing in with Google</string>
+    <string name="sing_in_with_apple">Sing In with Apple</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="login_is_empty">Login is empty</string>
+    <string name="first_name_is_empty">First name is Empty</string>
+    <string name="last_name_is_empty">Last name is Empty</string>
+    <string name="email_is_empty">Email is Empty</string>
+    <string name="pass_is_empty">Password is empty</string>
+    <string name="Invalid_login">Invalid login</string>
+    <string name="Invalid_first_name">Invalid First name</string>
+    <string name="Invalid_last_name">Invalid Last name</string>
+    <string name="Invalid_password">Invalid password</string>
+    <string name="Invalid_email">Invalid Email</string>
+    <string name="not_login">Such a login is not registered</string>
+    <string name="already_login">Such a login is already registered</string>
+    <string name="registered">User successfully registered</string>
+</resources>
