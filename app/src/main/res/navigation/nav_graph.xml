@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/singInFragment"
-        android:name="com.example.onlineshop.fragments.SingInFragment"
+        android:name="com.example.onlineshop.presentation.fragments.SingInFragment"
         android:label="fragment_sing_in"
         tools:layout="@layout/fragment_sing_in" >
         <action
@@ -20,7 +20,16 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeBackFragment2"
-        android:name="com.example.onlineshop.fragments.WelcomeBackFragment"
+        android:name="com.example.onlineshop.presentation.fragments.WelcomeBackFragment"
         android:label="fragment_welcome_back"
-        tools:layout="@layout/fragment_welcome_back" />
+        tools:layout="@layout/fragment_welcome_back" >
+        <action
+            android:id="@+id/action_welcomeBackFragment2_to_page1Fragment"
+            app:destination="@id/page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page1Fragment"
+        android:name="com.example.onlineshop.presentation.fragments.page1.Page1Fragment"
+        android:label="fragment_page1"
+        tools:layout="@layout/fragment_page1" />
 </navigation>

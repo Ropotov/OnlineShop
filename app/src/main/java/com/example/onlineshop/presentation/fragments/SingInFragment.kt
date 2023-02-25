@@ -1,4 +1,4 @@
-package com.example.onlineshop.fragments
+package com.example.onlineshop.presentation.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.onlineshop.*
-import com.example.onlineshop.database.dataBase
+import com.example.onlineshop.data.database.dataBase
 import com.example.onlineshop.databinding.FragmentSingInBinding
 
 class SingInFragment : Fragment() {
 
-    lateinit var binding: FragmentSingInBinding
+    private lateinit var binding: FragmentSingInBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

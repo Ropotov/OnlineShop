@@ -1,4 +1,4 @@
-package com.example.onlineshop.fragments
+package com.example.onlineshop.presentation.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.onlineshop.*
-import com.example.onlineshop.database.dataBase
+import com.example.onlineshop.data.database.dataBase
 import com.example.onlineshop.databinding.FragmentWelcomeBackBinding
 
 class WelcomeBackFragment : Fragment() {
 
-    lateinit var binding: FragmentWelcomeBackBinding
+    private lateinit var binding: FragmentWelcomeBackBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +43,9 @@ class WelcomeBackFragment : Fragment() {
                 context,
                 getString(R.string.Invalid_password)
             )
-            else -> showToast(context, "GOOD")
+            else -> {
+                findNavController().navigate(R.id.action_welcomeBackFragment2_to_page1Fragment)
+            }
         }
     }
 }
