@@ -44,7 +44,7 @@ class WelcomeBackFragment : Fragment() {
                 getString(R.string.Invalid_password)
             )
             else -> {
-                findNavController().navigate(R.id.action_welcomeBackFragment2_to_page1Fragment)
+                findNavController().navigate(R.id.action_welcomeBackFragment2_to_viewPagerFragment)
             }
         }
     }

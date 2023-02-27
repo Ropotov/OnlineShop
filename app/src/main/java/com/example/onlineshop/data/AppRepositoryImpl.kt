@@ -4,13 +4,13 @@ import com.example.onlineshop.R
 import com.example.onlineshop.data.api.RetrofitInstance
 import com.example.onlineshop.domain.AppRepository
 import com.example.onlineshop.domain.models.CategoryItem
-import com.example.onlineshop.domain.models.FlashSale
-import com.example.onlineshop.domain.models.LatestList
+import com.example.onlineshop.domain.models.HorizontalListItem
+import com.example.onlineshop.domain.models.ListItem
 
 class AppRepositoryImpl() : AppRepository {
+    override suspend fun getListContent(): List<ListItem> {
 
-    override fun getCategoriesList(): List<CategoryItem> {
-        return listOf(
+        val categoryListItem = listOf(
             CategoryItem("Phones", R.drawable.phones),
             CategoryItem("Headphones", R.drawable.headphones),
             CategoryItem("Games", R.drawable.games),
@@ -18,13 +18,26 @@ class AppRepositoryImpl() : AppRepository {
             CategoryItem("Furniture", R.drawable.furniture),
             CategoryItem("Kids", R.drawable.kids),
         )
-    }
+        val latestListItem = RetrofitInstance.api.getLatestList()
+        val flashSaleListItem = RetrofitInstance.api.getFlashSaleList()
 
-    override suspend fun getLatestList(): LatestList {
-        return RetrofitInstance.api.getLatestList()
-    }
-
-    override suspend fun getFlashSaleList(): FlashSale {
-        return  RetrofitInstance.api.getFlashSaleList()
+        return listOf(
+            HorizontalListItem(
+                title = "Categories",
+                list = categoryListItem
+            ),
+            HorizontalListItem(
+                title = "Latest",
+                list = latestListItem.latest
+            ),
+            HorizontalListItem(
+                title = "Flash sale",
+                list = flashSaleListItem.flash_sale
+            ),
+            HorizontalListItem(
+                title = "Brands",
+                list = latestListItem.latest
+            ),
+        )
     }
 }

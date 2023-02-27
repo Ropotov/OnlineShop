@@ -1,5 +1,6 @@
 package com.example.onlineshop.data.database
 
 val dataBase = mutableMapOf(
-    "Nikita" to "Ropotov"
+    "Nikita" to "Ropotov",
+    "qqqq" to "qqqq",
 )

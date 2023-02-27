@@ -16,8 +16,8 @@
         android:text="@string/welcome_back"
         android:textColor="@color/black"
         android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etFirstName"
+        app:layout_constraintStart_toStartOf="@+id/etFirstName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -41,11 +41,9 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="43dp"
         android:layout_marginTop="35dp"
-        android:layout_marginEnd="43dp"
         android:autofillHints="name"
         android:background="@drawable/edit_text"
         android:fontFamily="@font/montserrat_medium"
@@ -54,23 +52,21 @@
         android:inputType="textPassword"
         android:textColorHint="@color/gray"
         android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etFirstName"
+        app:layout_constraintStart_toStartOf="@+id/etFirstName"
         app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
-
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogIn"
         style="@style/BlueButton"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="46dp"
-        android:layout_marginStart="43dp"
         android:layout_marginTop="113dp"
-        android:layout_marginEnd="43dp"
         android:text="@string/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
 
