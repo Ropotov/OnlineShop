@@ -24,12 +24,12 @@
         android:label="fragment_welcome_back"
         tools:layout="@layout/fragment_welcome_back" >
         <action
-            android:id="@+id/action_welcomeBackFragment2_to_page1Fragment"
-            app:destination="@id/page1Fragment" />
+            android:id="@+id/action_welcomeBackFragment2_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/page1Fragment"
-        android:name="com.example.onlineshop.presentation.fragments.page1.Page1Fragment"
-        android:label="fragment_page1"
-        tools:layout="@layout/fragment_page1" />
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.onlineshop.presentation.fragments.viewPagerFragment.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" />
 </navigation>

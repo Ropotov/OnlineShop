@@ -14,11 +14,4 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
     }
-
-    fun visibleTabLayout() {
-       binding.tabLayout.visibility = View.VISIBLE
-    }
-    fun invisibleTabLayout() {
-        binding.tabLayout.visibility = View.INVISIBLE
-    }
 }
