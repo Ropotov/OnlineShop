@@ -2,16 +2,14 @@ package com.example.onlineshop.presentation.fragments.page1
 
 import android.annotation.SuppressLint
 import com.bumptech.glide.Glide
-import com.example.onlineshop.databinding.HorizontalListItemBinding
-import com.example.onlineshop.databinding.ItemCategoryBinding
-import com.example.onlineshop.databinding.LatestItemBinding
-import com.example.onlineshop.databinding.SaleItemBinding
+import com.example.onlineshop.R
+import com.example.onlineshop.databinding.*
 import com.example.onlineshop.domain.models.*
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 object MainAdapterDelegates {
 
-    val horizontalDelegate =
+    fun horizontalDelegate() =
         adapterDelegateViewBinding<HorizontalListItem, ListItem, HorizontalListItemBinding>({ inflater, container ->
             HorizontalListItemBinding.inflate(
                 inflater,
@@ -32,7 +30,7 @@ object MainAdapterDelegates {
         }
 
 
-    val categoryItemDelegate =
+    fun categoryItemDelegate() =
         adapterDelegateViewBinding<CategoryItem, ListItem, ItemCategoryBinding>({ inflater, container ->
             ItemCategoryBinding.inflate(inflater, container, false)
         }
@@ -46,7 +44,7 @@ object MainAdapterDelegates {
         }
 
     @SuppressLint("SetTextI18n")
-    val latestItemDelegate =
+    fun latestItemDelegate() =
         adapterDelegateViewBinding<LatestItem, ListItem, LatestItemBinding>({ inflater, container ->
             LatestItemBinding.inflate(inflater, container, false)
         }
@@ -62,7 +60,7 @@ object MainAdapterDelegates {
         }
 
     @SuppressLint("SetTextI18n")
-    val flashSaleItemDelegate =
+    fun flashSaleItemDelegate() =
         adapterDelegateViewBinding<FlashSaleX, ListItem, SaleItemBinding>({ inflater, container ->
             SaleItemBinding.inflate(inflater, container, false)
         }
@@ -76,4 +74,24 @@ object MainAdapterDelegates {
                 }
             }
         }
+
+    fun profileMenuItemDelegate() =
+        adapterDelegateViewBinding<ProfileMenuItem, ListItem, ProfileMenuItemBinding>({ inflater, container ->
+            ProfileMenuItemBinding.inflate(inflater, container, false)
+        }
+        ) {
+            bind {
+                with(binding) {
+                    tvMenuItemName.text = item.name
+                    menuIcon.setImageResource(item.resId)
+                    when (item.endTv) {
+                       is String -> tvBack.text = item.endTv.toString()
+                       is Int -> tvBack.setCompoundDrawablesWithIntrinsicBounds(
+                            null, null, getDrawable(R.drawable.next_button), null
+                        )
+                    }
+                }
+            }
+        }
 }
+

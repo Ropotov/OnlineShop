@@ -2,7 +2,7 @@
     <string name="app_name">OnlineShop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sing_in">Sing in</string>
+    <string name="sing_in">Sign in</string>
     <string name="last_name">Last Name</string>
     <string name="first_name">First name</string>
     <string name="email">Email</string>
@@ -41,4 +41,10 @@
     <string name="price_latest">$ 31.00</string>
     <string name="latest_name">Samsung S20</string>
     <string name="flash_sale">Flash Sale</string>
+    <string name="profile">Profile</string>
+    <string name="button_back">button_back</string>
+    <string name="change_photo">Change photo</string>
+    <string name="profile_name">Nikita Ropotov</string>
+    <string name="upload_item">Upload item</string>
+    <string name="profile_menu_item">Provile icon</string>
 </resources>

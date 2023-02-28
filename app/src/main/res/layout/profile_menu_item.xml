@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="20dp"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp">
+
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/menu_profile_background"
+        android:contentDescription="@string/profile_menu_item"
+        android:padding="10dp"
+        android:src="@drawable/credit_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMenuItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/menuIcon"
+        app:layout_constraintStart_toEndOf="@+id/menuIcon"
+        app:layout_constraintTop_toTopOf="@+id/menuIcon"
+        tools:text="TradeStore" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMenuItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvMenuItemName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

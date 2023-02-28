@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -39,23 +38,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcomeBack" />
 
-    <EditText
-        android:id="@+id/etPassword"
+    <LinearLayout
+        android:id="@+id/llPassword"
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginTop="35dp"
-        android:autofillHints="name"
         android:background="@drawable/edit_text"
-        android:fontFamily="@font/montserrat_medium"
-        android:gravity="center"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textColorHint="@color/gray"
-        android:textSize="11sp"
+        android:orientation="horizontal"
+        android:weightSum="100"
         app:layout_constraintEnd_toEndOf="@+id/etFirstName"
         app:layout_constraintStart_toStartOf="@+id/etFirstName"
-        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName">
 
+        <EditText
+            android:id="@+id/etPasswordText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_weight="97"
+            android:autofillHints="password"
+            android:background="@drawable/text_input"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/gray"
+            android:textSize="11sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@color/gray20"
+            android:button="@drawable/check_box_selector"
+            android:buttonTint="@color/gray"
+            android:checked="false"
+            android:gravity="center" />
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogIn"
@@ -65,9 +88,9 @@
         android:layout_marginTop="113dp"
         android:text="@string/login"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintStart_toStartOf="@+id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/llPassword"
+        app:layout_constraintStart_toStartOf="@+id/llPassword"
+        app:layout_constraintTop_toBottomOf="@+id/llPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

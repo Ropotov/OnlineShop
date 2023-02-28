@@ -22,5 +22,9 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="Password" parent="Theme.AppCompat.Light">
+        <item name="background">"@android:color/transparent"</item>
+    </style>
+
 
 </resources>

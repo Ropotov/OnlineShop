@@ -1,4 +1,4 @@
-package com.example.onlineshop
+package com.example.onlineshop.presentation
 
 import android.app.Activity
 import android.content.Context
@@ -29,4 +29,8 @@ fun dismissKeyboard(activity: Activity) {
     activity.currentFocus?.let {
         imm.hideSoftInputFromWindow(it.applicationWindowToken, 0)
     }
+}
+
+fun toCharacterArray(str: String): Array<Char> {
+    return str.toCharArray().toTypedArray()
 }

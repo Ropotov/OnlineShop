@@ -7,25 +7,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.onlineshop.*
+import com.example.onlineshop.R
 import com.example.onlineshop.data.database.dataBase
-import com.example.onlineshop.databinding.FragmentSingInBinding
+import com.example.onlineshop.databinding.FragmentSignInBinding
+import com.example.onlineshop.presentation.*
 
-class SingInFragment : Fragment() {
+class SignInFragment : Fragment() {
 
-    private lateinit var binding: FragmentSingInBinding
+    private lateinit var binding: FragmentSignInBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSingInBinding.inflate(layoutInflater, container, false)
+        binding = FragmentSignInBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnSingIn.setOnClickListener {
+        binding.btnSignIn.setOnClickListener {
             registration(requireContext())
         }
         binding.tvLogin.setOnClickListener {

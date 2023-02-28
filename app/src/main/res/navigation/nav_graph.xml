@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/singInFragment"
-        android:name="com.example.onlineshop.presentation.fragments.SingInFragment"
+        android:name="com.example.onlineshop.presentation.fragments.SignInFragment"
         android:label="fragment_sing_in"
-        tools:layout="@layout/fragment_sing_in" >
+        tools:layout="@layout/fragment_sign_in" >
         <action
             android:id="@+id/action_singInFragment_to_welcomeBackFragment2"
             app:destination="@id/welcomeBackFragment2"

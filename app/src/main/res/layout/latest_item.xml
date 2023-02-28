@@ -13,75 +13,75 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foreground="#667B7B7B">
-
-        <ImageView
-            android:id="@+id/ivLatestItem"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/photo_latest_view"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background" />
-    </FrameLayout>
+            android:foreground="#667B7B7B">
+
+            <ImageView
+                android:id="@+id/ivLatestItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo_latest_view"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+        </FrameLayout>
 
 
-    <TextView
-        android:id="@+id/tvLatestCategory"
-        android:layout_width="40dp"
-        android:layout_height="9dp"
-        android:layout_margin="7dp"
-        android:background="@drawable/edit_text"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="@string/phone"
-        android:textColor="@color/black"
-        android:textSize="6sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvLatestName"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SmallSp" />
+        <TextView
+            android:id="@+id/tvLatestCategory"
+            android:layout_width="40dp"
+            android:layout_height="9dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/edit_text"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="@string/phone"
+            android:textColor="@color/black"
+            android:textSize="6sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLatestName"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp" />
 
-    <TextView
-        android:id="@+id/tvLatestName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:fontFamily="@font/poppins_medium"
-        android:padding="3dp"
-        android:text="@string/latest_name"
-        android:textColor="@color/white"
-        android:textSize="9sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvLatestPrice"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SmallSp" />
+        <TextView
+            android:id="@+id/tvLatestName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="3dp"
+            android:text="@string/latest_name"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLatestPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp" />
 
-    <TextView
-        android:id="@+id/tvLatestPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:fontFamily="@font/poppins_medium"
-        android:padding="3dp"
-        android:text="@string/price_latest"
-        android:textColor="@color/white"
-        android:textSize="7sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SmallSp" />
+        <TextView
+            android:id="@+id/tvLatestPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="3dp"
+            android:text="@string/price_latest"
+            android:textColor="@color/white"
+            android:textSize="7sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp" />
 
-    <ImageButton
-        android:id="@+id/ibAdd"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_margin="7dp"
-        android:background="@drawable/background_category"
-        android:backgroundTint="@color/white90"
-        android:src="@drawable/baseline_add_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <ImageButton
+            android:id="@+id/ibAdd"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/background_category"
+            android:backgroundTint="@color/white90"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>

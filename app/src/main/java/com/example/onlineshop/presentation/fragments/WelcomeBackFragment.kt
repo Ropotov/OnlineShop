@@ -2,14 +2,20 @@ package com.example.onlineshop.presentation.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.onlineshop.*
+import com.example.onlineshop.R
 import com.example.onlineshop.data.database.dataBase
 import com.example.onlineshop.databinding.FragmentWelcomeBackBinding
+import com.example.onlineshop.presentation.dismissKeyboard
+import com.example.onlineshop.presentation.isNameValid
+import com.example.onlineshop.presentation.showToast
+import com.example.onlineshop.presentation.textIsEmpty
 
 class WelcomeBackFragment : Fragment() {
 
@@ -28,12 +34,19 @@ class WelcomeBackFragment : Fragment() {
         binding.btnLogIn.setOnClickListener {
             login(requireContext())
         }
+        binding.checkBox.setOnCheckedChangeListener { _, _ ->
+            if (binding.checkBox.isChecked) {
+                binding.etPasswordText.transformationMethod = HideReturnsTransformationMethod()
+            } else {
+                binding.etPasswordText.transformationMethod = PasswordTransformationMethod()
+            }
+        }
     }
 
     private fun login(context: Context) {
         dismissKeyboard(requireActivity())
         val login = binding.etFirstName.text.toString()
-        val password = binding.etPassword.text.toString()
+        val password = binding.etPasswordText.text.toString()
         when {
             textIsEmpty(login) -> showToast(context, getString(R.string.login_is_empty))
             textIsEmpty(password) -> showToast(context, getString((R.string.pass_is_empty)))
