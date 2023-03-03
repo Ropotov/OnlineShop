@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/singInFragment"
-        android:name="com.example.onlineshop.presentation.fragments.SignInFragment"
+        android:name="com.example.onlineshop.presentation.fragments.signInFragment.SignInFragment"
         android:label="fragment_sing_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -17,10 +17,13 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_singInFragment_to_viewPagerFragment2"
+            app:destination="@id/viewPagerFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeBackFragment2"
-        android:name="com.example.onlineshop.presentation.fragments.WelcomeBackFragment"
+        android:name="com.example.onlineshop.presentation.fragments.welcomeBackFragment.WelcomeBackFragment"
         android:label="fragment_welcome_back"
         tools:layout="@layout/fragment_welcome_back" >
         <action

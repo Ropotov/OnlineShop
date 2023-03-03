@@ -47,4 +47,6 @@
     <string name="profile_name">Nikita Ropotov</string>
     <string name="upload_item">Upload item</string>
     <string name="profile_menu_item">Provile icon</string>
+    <string name="plug_fragment_tv">There will be content here someday</string>
+    <string name="backPressed">Again to get out</string>
 </resources>

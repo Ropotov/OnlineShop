@@ -27,6 +27,21 @@
                 android:src="@drawable/ic_launcher_background" />
         </FrameLayout>
 
+        <TextView
+            android:id="@+id/tvSalePercent"
+            android:layout_width="50dp"
+            android:layout_height="17dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/sale_background"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
+
 
         <TextView
             android:id="@+id/tvSaleCategory"
@@ -93,6 +108,15 @@
             app:layout_constraintBottom_toBottomOf="@+id/ibAdd"
             app:layout_constraintEnd_toStartOf="@+id/ibAdd"
             app:layout_constraintTop_toTopOf="@+id/ibAdd" />
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/photo_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
