@@ -77,11 +77,14 @@ object MainAdapterDelegates {
       }
     }
 
-  fun profileMenuItemDelegate() =
+  fun profileMenuItemDelegate(itemClickedListener: ((ProfileMenuItem) -> Unit)?) =
     adapterDelegateViewBinding<ProfileMenuItem, ListItem, ProfileMenuItemBinding>({ inflater, container ->
       ProfileMenuItemBinding.inflate(inflater, container, false)
     }
     ) {
+      binding.root.setOnClickListener {
+        itemClickedListener?.invoke(item)
+      }
       bind {
         with(binding) {
           tvMenuItemName.text = item.name

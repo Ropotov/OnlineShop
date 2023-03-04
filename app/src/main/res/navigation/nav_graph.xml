@@ -17,22 +17,10 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-        <action
-            android:id="@+id/action_singInFragment_to_viewPagerFragment2"
-            app:destination="@id/viewPagerFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeBackFragment2"
         android:name="com.example.onlineshop.presentation.fragments.welcomeBackFragment.WelcomeBackFragment"
         android:label="fragment_welcome_back"
-        tools:layout="@layout/fragment_welcome_back" >
-        <action
-            android:id="@+id/action_welcomeBackFragment2_to_viewPagerFragment"
-            app:destination="@id/viewPagerFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/viewPagerFragment"
-        android:name="com.example.onlineshop.presentation.fragments.viewPagerFragment.ViewPagerFragment"
-        android:label="fragment_view_pager"
-        tools:layout="@layout/fragment_view_pager" />
+        tools:layout="@layout/fragment_welcome_back" />
 </navigation>

@@ -2,11 +2,11 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
     <item android:gravity="center">
+        <ripple android:color="@color/white90"/>
         <shape>
             <size
                 android:width="40dp"
                 android:height="40dp" />
-
             <corners android:radius="50dp" />/>
         </shape>
     </item>

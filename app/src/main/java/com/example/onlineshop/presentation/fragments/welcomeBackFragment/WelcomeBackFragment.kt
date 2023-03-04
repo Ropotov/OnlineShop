@@ -1,6 +1,7 @@
 package com.example.onlineshop.presentation.fragments.welcomeBackFragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
@@ -15,6 +16,7 @@ import com.example.onlineshop.R
 import com.example.onlineshop.databinding.FragmentWelcomeBackBinding
 import com.example.onlineshop.di.ViewModelFactory
 import com.example.onlineshop.domain.models.User
+import com.example.onlineshop.presentation.activity.ContentActivity
 import com.example.onlineshop.presentation.dismissKeyboard
 import com.example.onlineshop.presentation.isNameValid
 import com.example.onlineshop.presentation.showSnackBar
@@ -87,7 +89,7 @@ class WelcomeBackFragment : Fragment() {
         val user = viewModel.searchUser(listUser, login)
         if (user != null) {
           if (password == user.password) {
-            findNavController().navigate(R.id.action_welcomeBackFragment2_to_viewPagerFragment)
+           startActivity(Intent(requireContext(), ContentActivity::class.java))
           } else {
             showSnackBar(binding.constraint, getString(R.string.Invalid_password))
           }

@@ -1,6 +1,7 @@
 package com.example.onlineshop.presentation.fragments.signInFragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +11,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.onlineshop.App
 import com.example.onlineshop.R
-import com.example.onlineshop.domain.models.User
 import com.example.onlineshop.databinding.FragmentSignInBinding
 import com.example.onlineshop.di.ViewModelFactory
+import com.example.onlineshop.domain.models.User
 import com.example.onlineshop.presentation.*
+import com.example.onlineshop.presentation.activity.ContentActivity
 import javax.inject.Inject
 
 class SignInFragment : Fragment() {
@@ -57,15 +59,27 @@ class SignInFragment : Fragment() {
     val lastName = binding.etLastName.text.toString()
     val email = binding.etSingInEmail.text.toString()
     var listUser = emptyList<User>()
-    viewModel.listUser.observe(viewLifecycleOwner){
+    viewModel.listUser.observe(viewLifecycleOwner) {
       listUser = it
     }
 
     when {
-      textIsEmpty(firstName) -> showSnackBar(binding.constraint, getString(R.string.first_name_is_empty))
-      !isNameValid(firstName) -> showSnackBar(binding.constraint, getString(R.string.Invalid_first_name))
-      textIsEmpty(lastName) -> showSnackBar(binding.constraint, getString(R.string.last_name_is_empty))
-      !isNameValid(lastName) -> showSnackBar(binding.constraint, getString(R.string.Invalid_last_name))
+      textIsEmpty(firstName) -> showSnackBar(
+        binding.constraint,
+        getString(R.string.first_name_is_empty)
+      )
+      !isNameValid(firstName) -> showSnackBar(
+        binding.constraint,
+        getString(R.string.Invalid_first_name)
+      )
+      textIsEmpty(lastName) -> showSnackBar(
+        binding.constraint,
+        getString(R.string.last_name_is_empty)
+      )
+      !isNameValid(lastName) -> showSnackBar(
+        binding.constraint,
+        getString(R.string.Invalid_last_name)
+      )
       textIsEmpty(email) -> showSnackBar(binding.constraint, getString(R.string.email_is_empty))
       !isEmailValid(email) -> showSnackBar(binding.constraint, getString(R.string.Invalid_email))
       else -> {
@@ -82,7 +96,7 @@ class SignInFragment : Fragment() {
             )
           )
           showSnackBar(binding.constraint, getString(R.string.registered))
-          findNavController().navigate(R.id.action_singInFragment_to_viewPagerFragment2)
+          startActivity(Intent(requireContext(), ContentActivity::class.java))
         }
       }
     }

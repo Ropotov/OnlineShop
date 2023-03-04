@@ -1,15 +1,19 @@
 package com.example.onlineshop.presentation.fragments.profileFragment
 
 import android.content.Context
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.onlineshop.App
+import com.example.onlineshop.R
 import com.example.onlineshop.databinding.FragmentProfileBinding
 import com.example.onlineshop.di.ViewModelFactory
+import com.example.onlineshop.presentation.fragments.welcomeBackFragment.WelcomeBackFragment
 import javax.inject.Inject
 
 
@@ -46,5 +50,22 @@ class ProfileFragment : Fragment() {
     viewModel.listProfileItem.observe(viewLifecycleOwner) {
       profileAdapter.items = it
     }
+    binding.btnUpload.setOnClickListener {
+      selectImageFromGallery()
+    }
+    profileAdapter.itemClickListener = {
+      requireActivity().supportFragmentManager
+        .beginTransaction().replace(R.id.container, WelcomeBackFragment())
+        .commit()
+    }
   }
+
+  private val selectImageFromGalleryResult =
+    registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+      uri?.let { binding.imageView.setImageURI(uri) }
+    }
+
+  private fun selectImageFromGallery() =
+    selectImageFromGalleryResult.launch("image/*")
+
 }

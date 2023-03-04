@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/page1Fragment"
+        android:icon="@drawable/tab_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/tab_favorite"
+        android:title="@string/favorites" />
+    <item
+        android:id="@+id/basketFragment"
+        android:icon="@drawable/tab_basket"
+        android:title="@string/basket" />
+    <item
+        android:id="@+id/commentsFragment"
+        android:icon="@drawable/tab_comments"
+        android:title="@string/comments" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/tab_profile"
+        android:title="@string/profile" />
+</menu>

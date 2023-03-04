@@ -14,21 +14,7 @@ class AppRepositoryImpl @Inject constructor(
 ) : AppRepository {
 
   override suspend fun getListContent(): List<ListItem> {
-
-    val categoryListItem = listOf(
-      CategoryItem("Phones", R.drawable.phones),
-      CategoryItem("Headphones", R.drawable.headphones),
-      CategoryItem("Games", R.drawable.games),
-      CategoryItem("Cars", R.drawable.cars),
-      CategoryItem("Furniture", R.drawable.furniture),
-      CategoryItem("Kids", R.drawable.kids),
-    )
-
     return listOf(
-      HorizontalListItem(
-        title = "Categories",
-        list = categoryListItem
-      ),
       HorizontalListItem(
         title = "Latest",
         list = apiService.getLatestList().latest
@@ -41,6 +27,17 @@ class AppRepositoryImpl @Inject constructor(
         title = "Brands",
         list = apiService.getLatestList().latest
       ),
+    )
+  }
+
+  override fun getCategoryItem(): List<CategoryItem> {
+    return listOf(
+      CategoryItem("Phones", R.drawable.phones),
+      CategoryItem("Headphones", R.drawable.headphones),
+      CategoryItem("Games", R.drawable.games),
+      CategoryItem("Cars", R.drawable.cars),
+      CategoryItem("Furniture", R.drawable.furniture),
+      CategoryItem("Kids", R.drawable.kids),
     )
   }
 

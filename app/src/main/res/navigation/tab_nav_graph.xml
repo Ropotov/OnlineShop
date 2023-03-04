@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab_nav_graph"
+    app:startDestination="@id/page1Fragment">
+
+    <fragment
+        android:id="@+id/page1Fragment"
+        android:name="com.example.onlineshop.presentation.fragments.page1.Page1Fragment"
+        android:label="fragment_page1"
+        tools:layout="@layout/fragment_page1" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.onlineshop.presentation.fragments.profileFragment.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.onlineshop.presentation.fragments.FavoritesFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.onlineshop.presentation.fragments.CommentsFragment"
+        android:label="Comments"
+        tools:layout="@layout/fragment_comments" />
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.onlineshop.presentation.fragments.BasketFragment"
+        android:label="Basket"
+        tools:layout="@layout/fragment_basket" />
+
+</navigation>

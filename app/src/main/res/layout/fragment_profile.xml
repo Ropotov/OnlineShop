@@ -24,6 +24,7 @@
             android:textSize="15sp" />
 
         <ImageButton
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -32,16 +33,23 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/imageView"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImageView"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/profile_photo_background"
-        android:contentDescription="@string/profile"
-        android:src="@drawable/profile_photo"
+        app:cardCornerRadius="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tollBar" />
+        app:layout_constraintTop_toBottomOf="@+id/tollBar">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/profile_photo" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvChangePhoto"
@@ -51,9 +59,9 @@
         android:fontFamily="@font/montserrat_medium"
         android:text="@string/change_photo"
         android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/cvImageView"
+        app:layout_constraintStart_toStartOf="@+id/cvImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cvImageView"
         tools:ignore="SmallSp" />
 
     <TextView
@@ -93,7 +101,6 @@
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingBottom="60dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

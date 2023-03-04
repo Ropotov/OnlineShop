@@ -19,4 +19,4 @@ data class User(
   var email: String,
   @ColumnInfo
   var password: String = lastName
-)
+): java.io.Serializable

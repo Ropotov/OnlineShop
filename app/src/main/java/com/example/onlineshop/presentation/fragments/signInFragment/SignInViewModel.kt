@@ -28,10 +28,11 @@ class SignInViewModel @Inject constructor(
 
   }
 
-  fun addAccount(user: User) {
+  fun addAccount(user: User):User {
     viewModelScope.launch(Dispatchers.IO) {
       repository.addAccount(user)
     }
+    return user
   }
 
   fun searchUser(list: List<User>, login: String): User? {

@@ -1,10 +1,11 @@
-package com.example.onlineshop.presentation
+package com.example.onlineshop.presentation.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshop.App
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityMainBinding
+import com.example.onlineshop.presentation.showSnackBar
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,4 +36,5 @@ class MainActivity : AppCompatActivity() {
     }
     backPressed = System.currentTimeMillis()
   }
+
 }

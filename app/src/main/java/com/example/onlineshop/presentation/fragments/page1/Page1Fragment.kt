@@ -24,8 +24,6 @@ class Page1Fragment : Fragment() {
     (requireActivity().application as App).component
   }
 
-  private val adapter = ContentAdapter()
-
   override fun onAttach(context: Context) {
     component.inject(this)
     super.onAttach(context)
@@ -42,13 +40,18 @@ class Page1Fragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    val adapter = ContentAdapter()
+    val contentAdapter = ContentAdapter()
     viewModel.data.observe(viewLifecycleOwner) {
-      adapter.items = it
+      contentAdapter.items = it
+    }
+    val categoryAdapter = CategoryAdapter()
+    viewModel.category.observe(viewLifecycleOwner) {
+      categoryAdapter.items = it
     }
 
     with(binding) {
-      recyclerView.adapter = adapter
+      recyclerView.adapter = contentAdapter
+      recyclerViewCategory.adapter = categoryAdapter
     }
   }
 }

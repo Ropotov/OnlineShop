@@ -1,9 +1,8 @@
 package com.example.onlineshop.di
 
-import android.app.Activity
 import android.app.Application
 import com.example.onlineshop.App
-import com.example.onlineshop.presentation.MainActivity
+import com.example.onlineshop.presentation.activity.MainActivity
 import com.example.onlineshop.presentation.fragments.page1.Page1Fragment
 import com.example.onlineshop.presentation.fragments.profileFragment.ProfileFragment
 import com.example.onlineshop.presentation.fragments.signInFragment.SignInFragment
