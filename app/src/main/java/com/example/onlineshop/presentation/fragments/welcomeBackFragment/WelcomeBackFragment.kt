@@ -88,8 +88,14 @@ class WelcomeBackFragment : Fragment() {
       else -> {
         val user = viewModel.searchUser(listUser, login)
         if (user != null) {
+          val bundle = Bundle().apply {
+            getString("user", login)
+          }
           if (password == user.password) {
-           startActivity(Intent(requireContext(), ContentActivity::class.java))
+           startActivity(Intent(
+             requireContext(),
+             ContentActivity::class.java
+           ).putExtras(bundle))
           } else {
             showSnackBar(binding.constraint, getString(R.string.Invalid_password))
           }

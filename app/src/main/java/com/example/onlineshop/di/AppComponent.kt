@@ -2,6 +2,7 @@ package com.example.onlineshop.di
 
 import android.app.Application
 import com.example.onlineshop.App
+import com.example.onlineshop.presentation.activity.ContentActivity
 import com.example.onlineshop.presentation.activity.MainActivity
 import com.example.onlineshop.presentation.fragments.page1.Page1Fragment
 import com.example.onlineshop.presentation.fragments.profileFragment.ProfileFragment
@@ -18,6 +19,7 @@ interface AppComponent {
   fun inject(fragment: SignInFragment)
   fun inject(fragment: WelcomeBackFragment)
   fun inject(activity: MainActivity)
+  fun inject(activity: ContentActivity)
   fun inject(application: App)
 
   @Component.Factory

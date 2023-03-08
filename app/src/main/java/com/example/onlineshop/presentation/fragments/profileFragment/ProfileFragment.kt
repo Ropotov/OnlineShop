@@ -10,10 +10,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.onlineshop.App
-import com.example.onlineshop.R
 import com.example.onlineshop.databinding.FragmentProfileBinding
 import com.example.onlineshop.di.ViewModelFactory
-import com.example.onlineshop.presentation.fragments.welcomeBackFragment.WelcomeBackFragment
+import com.example.onlineshop.domain.models.User
+import com.example.onlineshop.presentation.activity.ContentActivity
 import javax.inject.Inject
 
 
@@ -50,13 +50,9 @@ class ProfileFragment : Fragment() {
     viewModel.listProfileItem.observe(viewLifecycleOwner) {
       profileAdapter.items = it
     }
+
     binding.btnUpload.setOnClickListener {
       selectImageFromGallery()
-    }
-    profileAdapter.itemClickListener = {
-      requireActivity().supportFragmentManager
-        .beginTransaction().replace(R.id.container, WelcomeBackFragment())
-        .commit()
     }
   }
 

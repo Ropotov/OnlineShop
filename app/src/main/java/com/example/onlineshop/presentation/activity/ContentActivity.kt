@@ -4,23 +4,30 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
+import com.example.onlineshop.App
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityContentBinding
+import com.example.onlineshop.di.ViewModelFactory
+import javax.inject.Inject
 
 class ContentActivity : AppCompatActivity() {
 
   private lateinit var binding: ActivityContentBinding
   private lateinit var navController: NavController
-  private var menuToolbar: Menu? = null
+
+  private val menuToolbar: Menu? = null
 
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
     binding = ActivityContentBinding.inflate(layoutInflater)
     setContentView(binding.root)
+
     navController = Navigation.findNavController(this, R.id.navFragment)
     binding.mainContent.bottomNavigation.setupWithNavController(navController)
     setDestinationController()
